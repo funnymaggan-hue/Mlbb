@@ -1,0 +1,21 @@
+.env
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.db
+*.sqlite3
+alembic/versions/__pycache__/
+.DS_Store
+
+# Maxfiy va mahalliy fayllar
+.env
+.venv/
+.pytest_cache/
+__pycache__/
+*.py[cod]
+*.db
+*.sqlite3

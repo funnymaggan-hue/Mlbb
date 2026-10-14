@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="uz">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#080a16"><title>MLBB Tournament Pro</title>
+<link rel="stylesheet" href="/static/css/app.css">
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+<div class="app-shell">
+<header class="topbar"><div class="brand-mark">ML<span>BB</span></div><div><div class="eyebrow">ESPORTS PLATFORM</div><h1>Tournament <span>Pro</span></h1></div><button id="lang" class="icon-btn" aria-label="Til">UZ</button></header>
+<section class="hero"><div class="hero-copy"><p class="eyebrow">NEXT LEVEL COMPETITION</p><h2>Maydonga chiqing.<br><span>Chempion bo‘ling.</span></h2><p>Jamoangizni tuzing va navbatdagi turnirda kuchingizni ko‘rsating.</p><a href="#tournaments" class="primary-btn">Turnirlarni ko‘rish ↗</a></div><div class="hero-orb">⚔</div></section>
+<section class="stats"><div><b id="active-count">—</b><small>Turnirlar</small></div><div><b>5v5</b><small>Musobaqa</small></div><div><b>PRO</b><small>Platforma</small></div></section>
+<nav class="tabs"><button class="tab active" data-section="home">Bosh sahifa</button><button class="tab" data-section="tournaments">Turnirlar</button><button class="tab" data-section="teams">Jamoalar</button><button class="tab" data-section="profile">Profil</button></nav>
+<main>
+<section id="home" class="view"><div class="section-head"><div><p class="eyebrow">COMPETE • WIN • REPEAT</p><h2>Tanlangan turnirlar</h2></div><span class="live-pill">● LIVE HUB</span></div><div id="featured" class="tournament-grid"><div class="empty">Turnirlar yuklanmoqda…</div></div>
+<div class="section-head"><div><p class="eyebrow">STAY UPDATED</p><h2>So‘nggi yangiliklar</h2></div></div><div id="news" class="news-card">Yangiliklar yuklanmoqda…</div></section>
+<section id="tournaments" class="view hidden"><div class="section-head"><div><p class="eyebrow">FIND YOUR BATTLE</p><h2>Barcha turnirlar</h2></div></div><div id="all-tournaments" class="tournament-grid"></div></section>
+<section id="teams" class="view hidden"><div class="section-head"><div><p class="eyebrow">BUILD YOUR SQUAD</p><h2>Jamoa yaratish</h2></div></div><form id="team-form" class="panel"><label>Jamoa nomi<input name="name" minlength="2" maxlength="80" required placeholder="Masalan: Shadow Esports"></label><button class="primary-btn" type="submit">+ Jamoa yaratish</button></form><p class="muted">Jamoa yaratish uchun Mini App Telegram ichida ochilishi kerak.</p></section>
+<section id="profile" class="view hidden"><div class="section-head"><div><p class="eyebrow">PLAYER IDENTITY</p><h2>O‘yinchi profili</h2></div></div><div id="profile-status" class="panel">Telegram ichida ochilganda profil autentifikatsiyasi tekshiriladi.</div><form id="player-form" class="panel"><label>MLBB User ID<input name="mlbb_id" inputmode="numeric" required minlength="5" maxlength="15" placeholder="123456789"></label><label>Server ID<input name="server_id" inputmode="numeric" required maxlength="6" placeholder="1234"></label><label>O‘yin ichidagi taxallus<input name="nickname" required minlength="2" maxlength="80" placeholder="Nickname"></label><label>Rol<select name="role"><option value="flex">Flex</option><option value="tank">Tank</option><option value="roamer">Roamer</option><option value="jungler">Jungler</option><option value="mid">Mid Lane</option><option value="gold">Gold Lane</option><option value="exp">EXP Lane</option></select></label><button class="primary-btn" type="submit">ID’ni tekshirishga yuborish</button><p class="muted">Format tekshiruvi akkaunt haqiqiyligini tasdiqlamaydi. Provayder bo‘lmasa, ariza ko‘rib chiqishga yuboriladi.</p></form></section>
+</main><div id="toast" class="toast" role="status"></div><footer>MLBB TOURNAMENT PRO <span>•</span> Built for competitors</footer>
+</div><script src="/static/js/app.js"></script>
+</body></html>
