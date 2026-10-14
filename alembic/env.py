@@ -20,10 +20,18 @@ if config.config_file_name:
 
 target_metadata = Base.metadata
 
+def get_database_url():
+    url = settings.DATABASE_URL
+    if url.startswith("postgres://"):
+        url = url.replace("postgres://", "postgresql+asyncpg://", 1)
+    elif url.startswith("postgresql://"):
+        url = url.replace("postgresql://", "postgresql+asyncpg://", 1)
+    return url
+
 
 def run_migrations_offline():
     context.configure(
-        url=settings.DATABASE_URL,
+        url=get_database_url(),
         target_metadata=target_metadata,
         literal_binds=True,
         dialect_opts={"paramstyle": "named"},
@@ -43,7 +51,7 @@ def do_run_migrations(connection):
 
 async def run_migrations_online():
     section = config.get_section(config.config_ini_section) or {}
-    section["sqlalchemy.url"] = settings.DATABASE_URL
+    section["sqlalchemy.url"] = get_database_url()
 
     connectable = async_engine_from_config(
         section,
